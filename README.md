@@ -4,6 +4,8 @@ There are several classes, each with their own purposes:
 
 **Autonomous classes**: Designated by the color of the alliance and its position in relation to the carousel, each autonomous program is intended to deliver the duck from the carousel, park in the warehouse, and park in the alliance storage unit
 
+**EasyOpenCV classes**: Classes for pipelines & image processing, for autonomous period
+
 **ArmTesting**: Designed for testing out the main arm on the robot
 
 **FourWheelAutonomous**: An autonomous class designed to calibrate the robot from a specific position, used to test code before it is placed in its respective autonomous class
