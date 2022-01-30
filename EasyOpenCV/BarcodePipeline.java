@@ -6,6 +6,9 @@ import org.opencv.imgproc.Imgproc;
 import org.openftc.easyopencv.OpenCvPipeline;
 
 public class BarcodePipeline extends OpenCvPipeline {
+
+    public Mat ycrcbMat = new Mat();
+
     @Override
     public Mat processFrame(Mat input) {
 
