@@ -65,6 +65,7 @@ public class DuckPipeline extends OpenCvPipeline {
     private Mat region1, region2, region3;
     int avg1, avg2, avg3;
 
+    public volatile DuckPosition position = DuckPosition.LEFT;
 
     //colorspace
     public ColorSpace colorSpace = ColorSpace.YCrCb;
@@ -75,8 +76,6 @@ public class DuckPipeline extends OpenCvPipeline {
         YCrCb(Imgproc.COLOR_RGB2YCrCb),
         Lab(Imgproc.COLOR_RGB2Lab);
         int avg1, avg2, avg3;
-
-        public volatile DuckPosition position = new DuckPosition.LEFT;
 
         public int cvtCode = 0;
 
