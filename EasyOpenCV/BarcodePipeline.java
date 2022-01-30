@@ -8,7 +8,7 @@ import org.openftc.easyopencv.OpenCvPipeline;
 public class BarcodePipeline extends OpenCvPipeline {
     @Override
     public Mat processFrame(Mat input) {
-        
+
 
 
 
