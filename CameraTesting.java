@@ -15,7 +15,7 @@ import org.openftc.easyopencv.OpenCvInternalCamera;
 public class CameraTesting extends LinearOpMode {
 
     OpenCvCamera webcam;
-    CameraTestPipeline pipeline;
+    DuckPipeline pipeline;
     
     
     @Override
@@ -25,7 +25,7 @@ public class CameraTesting extends LinearOpMode {
         int cameraMonitorViewId = hardwareMap.appContext.getResources().getIdentifier("cameraMonitorViewId", "id", hardwareMap.appContext.getPackageName());
         webcam = OpenCvCameraFactory.getInstance().createWebcam(webcamName, cameraMonitorViewId);
         
-        pipeline = new CameraTestPipeline();
+        pipeline = new DuckPipeline();
         webcam.setPipeline(pipeline);
         
         webcam.openCameraDeviceAsync(new OpenCvCamera.AsyncCameraOpenListener() {
