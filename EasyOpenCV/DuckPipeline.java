@@ -27,9 +27,9 @@ public class DuckPipeline extends OpenCvPipeline {
 
     //top left points of each box
     //x is measured from left 0 to right 320, y is measured from top 0 to bottom 240
-    static final Point REGION1_TOPLEFT_ANCHOR_POINT = new Point(95,82);
-    static final Point REGION2_TOPLEFT_ANCHOR_POINT = new Point(163,82);
-    static final Point REGION3_TOPLEFT_ANCHOR_POINT = new Point(215,82);
+    static final Point REGION1_TOPLEFT_ANCHOR_POINT = new Point(92,95);
+    static final Point REGION2_TOPLEFT_ANCHOR_POINT = new Point(163,95);
+    static final Point REGION3_TOPLEFT_ANCHOR_POINT = new Point(215,95);
     
     //box dimensions
     static final int REGION_WIDTH = 25;
@@ -133,7 +133,7 @@ public class DuckPipeline extends OpenCvPipeline {
 
 
         //maximum average
-        int max = Math.max(Math.max(avg1, avg2), avg3);
+        int max = Math.min(Math.min(avg1, avg2), avg3);
 
         //fills in whichever box has the greatest average
         if(max == avg1)
@@ -173,7 +173,7 @@ public class DuckPipeline extends OpenCvPipeline {
                     -1); //thickness of rectangle (-1 is solid)
         }
 
-        telemetry.addData("[Pattern]", position);
+        telemetry.addData("Pattern", position);
         telemetry.addData("avg1", avg1);
         telemetry.addData("avg2", avg2);
         telemetry.addData("avg3", avg3);

@@ -10,8 +10,9 @@ import org.openftc.easyopencv.OpenCvCameraFactory;
 import org.openftc.easyopencv.OpenCvCameraRotation;
 import org.openftc.easyopencv.OpenCvWebcam;
 import org.openftc.easyopencv.OpenCvInternalCamera;
+import org.firstinspires.ftc.robotcore.external.Telemetry;
 
-
+@Autonomous
 public class AutoWithCamera extends LinearOpMode{
     //camera declarations
     private OpenCvCamera webcam;
@@ -31,7 +32,7 @@ public class AutoWithCamera extends LinearOpMode{
         WebcamName webcamName = hardwareMap.get(WebcamName.class, "webcam");
         int cameraMonitorViewId = hardwareMap.appContext.getResources().getIdentifier("cameraMonitorViewId", "id", hardwareMap.appContext.getPackageName());
         webcam = OpenCvCameraFactory.getInstance().createWebcam(webcamName, cameraMonitorViewId);
-        pipeline = new DuckPipeline();
+        pipeline = new DuckPipeline(telemetry);
         webcam.setPipeline(pipeline);
         webcam.openCameraDeviceAsync(new OpenCvCamera.AsyncCameraOpenListener() {
             @Override
