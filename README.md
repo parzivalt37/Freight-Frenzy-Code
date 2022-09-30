@@ -6,16 +6,20 @@ There are several classes, each with their own purposes:
 
 **EasyOpenCV classes**: Classes for pipelines & image processing, for autonomous period
 
-**ArmTesting**: Designed for testing out the main arm on the robot
+**ArmTest[ing]**: Designed for testing out the main arm on the robot
 
-**FourWheelAutonomous**: An autonomous class designed to calibrate the robot from a specific position, used to test code before it is placed in its respective autonomous class
+**CRServoTesting**: Testing continuous servos
 
-**FourWheelDrive**: The main driving TeleOp: this class contains code for basic robot movement, moving the carousel spinner, lifting and lowering the arm on the robot, and opening and closing the servo claw
+**CameraTesting**: Testing camera
 
-**RobotHardware**: This class creates a HardwareMap object that fetches the positions of which ports each device is plugged into on the Control and Expansion Hubs, and links that to the Motor/Servo objects that are declared in any code that will move the robot
+**Drive**: The main driving TeleOp: this class contains code for basic robot movement, moving the carousel spinner, lifting and lowering the arm on the robot, and opening and closing the servo claw
+
+**RobotHardware**: I actually have no clue what this class does, it just existed
 
 **ServoTesting**: A class designed for testing the servos on the end of the arm that create the claw
 
 **StrafeTest**: A short class used to test the strafing capabilities of the Mecanum wheels
 
-**TwoWheelDrive**: A deprecated TeleOp that acts as the equivalent of FourWheelDrive, but for two wheels
+**TwoPlayerDrive**: Incomplete class for testing 2 concurrent controllers
+
+**TwoWheelDrive**: Deprecated TeleOp that only works for two wheels
