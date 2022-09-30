@@ -1,4 +1,4 @@
-# First Tech Challenge code for team 20313
+# Freight Frenzy Code from FIRST Tech Challenge Team 20313
 
 There are several classes, each with their own purposes:
 
